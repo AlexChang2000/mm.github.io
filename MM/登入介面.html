@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title> <!-- -->
+    <style>
+        *{ background-color: grey;}
+        .login{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px; 
+        }
+        button{
+           cursor: pointer;
+       }
+    </style>
+    <script language="JavaScript" src="scripts/require.js">
+    static function setshow(){
+        document.getElementById('showUUU').innerHTML = "1234";
+    }
+    </script>
+
+</head>
+<body onload="showResult()">
+    <!--由上而下為:返回按鈕、一個有外框的div、帳號密碼輸入框、登入按鈕-->
+    <!-- style-->
+    <button type="button" onclick="javascript:location.href='管數主畫面.html'" ><img src="標題.png" style="height: 50px; width: 300px;"></button>
+    <h1 style="color: white; text-align: center;">~~登入系統~~</h1>
+    <div class="login" style="border: 10px solid; color: white; padding: 40px; width: 500px; height: 100px;" >
+        <br/>
+        <span style="margin-left: 125px; ">帳號:</span> <span><input type="password"></span>
+        <br/>
+        <span style="margin-left: 125px; ">密碼:</span> <span><input type="password"></span>
+        <br/>
+    <button style="width: 100px; height: 30px; font-size: 20px; color: darkkhaki; background-color: black; 
+    margin-left: 235px;" onclick="setshow()">登入</button>
+    </div>
+    <div id="showUUU">
+        123
+    </div>
+
+</body>
+</html>

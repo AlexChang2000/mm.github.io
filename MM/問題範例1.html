@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題範例1</title>
+    <style>
+        *{
+            background-color: rgb(255, 255, 255);
+        }
+        button{
+           cursor: pointer;
+       }
+    </style>
+
+    <script language="JavaScript">
+        //發布日期顯示
+        function ShowTime(){
+            var NowDate=new Date();
+            var y=NowDate.getFullYear();
+            var m=NowDate.getMonth();
+            var d=NowDate.getDate();
+            var h=NowDate.getHours();
+            var mm=NowDate.getMinutes();
+            document.getElementById('showbox').innerHTML = "發布日期: "+y+" 年 "+m+" 月 "+d+" 日 "+h+" 點 "+mm+" 分 ";
+        }
+        //發布人顯示
+        function ShowUser(){
+            document.getElementById('showboxUser').innerHTML = "發佈人: "+sessionStorage.getItem('userID')+" "+sessionStorage.getItem('userName');
+
+        }
+    </script>
+</head>
+<body onload="ShowTime(),ShowUser()">
+    <button type="button" onclick="javascript:location.href='管數主畫面.html'" ><img src="小標題.png" style="height: 50px; width: 300px;"></button>
+    <h1>問題簡述</h1>
+    <div style="border:3px rgb(17, 59, 0) solid;">
+        <textarea name="mytext"
+          rows="8"
+          cols="80">
+        </textarea>
+        <!--發布POST按鈕-->
+        <button style="width: 80px; height: 30px; font-size: 20px; color: darkkhaki; background-color: black; 
+        margin-left: 20px;"   onclick="javascript:location.href='管數主畫面.html' ">POST</button>
+        <!--發布日期/發布人顯示-->
+        <div>
+            <div id="showbox"></div>
+            <div id="showboxUser"></div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

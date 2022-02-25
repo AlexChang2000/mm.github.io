@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=devive-width, initial-scale=1.0"/>
+    <title>管理數學學術討論區</title>
+    <style>
+       button{
+           cursor: pointer;
+       }
+    </style>
+    
+    <script language="JavaScript">
+        function setUserID(){
+            sessionStorage.setItem('userID','08156140');
+            sessionStorage.setItem('userName','王至潔');
+            document.getElementById('showUserbox').innerHTML = "歡迎蒞臨: "+sessionStorage.getItem('userID')+sessionStorage.getItem('queryID');
+        }
+
+    </script>
+</head>
+<body onload="setUserID()">
+
+    <img src="標題.jpg" style="text-align: center;">   <!--封面圖片-->
+    <span id="showUserbox" style="padding-left: 950px;"></span>    <!--顯示登入的使用者-->
+    <span><button style="width: 100px; height: 40px; font-size: 20px; color: darkkhaki; 
+    background-color: black;" onclick="javascript:location.href='登入介面.html'">登出</button></span>   <!--登出鍵-->
+    <div>
+        <span><img src="group_icon.png"></span>
+        <h2><a href="課後意見討論區.html">每周課後意見討論區</a></h2>
+    </div>
+    <br/>
+    <hr/>
+    <div>
+        <span><img src="list_icon.png"></span>
+        <h2><a href="重要事項.html">重要事項</a></h2>
+    </div>
+    <br/>
+    <hr/>
+    <div>
+        <span><img src="website_icon.png"></span>
+        <h2><a href="相關網站.html">相關網站</a></h2>
+    </div>
+
+</body>
+</html>
+
